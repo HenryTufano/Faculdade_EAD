@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport"content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <title>Cadastro</title>
+        
+    </head>
+    <script> 
+        function cadastro(nome,email,usuario,nomecartao,numerocartao,vencimentocartao,codigocartao){
+            var aluno =[];
+
+            aluno.Add(nome,email,usuario,nomecartao,numerocartao,vencimentocartao,codigocartao);
+            window.console.error("You made a mistake");
+        } 
+       
+    </script>
+    <body>
+        <div id="login">
+            <form href="cadastro-realizado.html" class="card"  method="post">
+                <div class="card-header">
+                    <h2>Cadastro</h2>
+                </div>
+
+                <div class="card-content">
+                    <div class="card-content-area">
+                        <label for="nome">Nome Completo</label>
+                        <input type="text" id="nome" autocomplete="off">
+                    </div>
+                    <div class="card-content-area">
+                        <label for="email">email</label>
+                        <input type="text" id="email" autocomplete="off">
+                    </div>
+
+                    <div class="card-content-area">
+                        <label for="usuario">Login</label>
+                        <input type="text" id="usuario" autocomplete="off">
+                    </div>
+                    
+                    <div class="card-content-area">
+                        <label for="password">Senha</label>
+                        <input type="password" id="password" autocomplete="off">
+                    </div>
+                    <div class="card-content-area">
+                        <label for="nomecartao">Nome do titular do cartao</label>
+                        <input type="text" id="nomecartao" autocomplete="off">
+                    </div>
+                    
+                    <div class="card-content-area">
+                        <label for="numerocartao">Numero do cartao</label>
+                        <input type="text" id="numerocartao" autocomplete="off">
+                    </div>
+
+                    <div class="card-content-area">
+                        <label for="vencimentocartao">Vencimento(MM/AA)</label>
+                        <input type="text" id="vencimentocartao" autocomplete="off">
+                    </div>
+
+                    <div class="card-content-area">
+                        <label for="codigocartao">Codigo de seguranca</label>
+                        <input type="text" id="codigocartao" autocomplete="off">
+                        x
+                    </div>
+                    
+                </div>
+               
+
+                <script>
+                    var name =document.getElementById(nome);
+                    var email =document.getElementById(email);
+                    var user =document.getElementById(usuario);
+                    var namecartao =document.getElementById(nomecartao);
+                    var vencimento =document.getElementById(vencimentocartao);
+                    var securitycode =document.getElementById(codigocartao);
+                    cadastro(name,email,user,namecartao,vencimento,securitycode);
+                </script>
+                <div class="card-footer">
+                        
+                    <a  type="button"  onclick="javascript:cadastro(name,email,user,namecartao,vencimento,securitycode)" class="submit">cadastre-se</a>
+                    <a type="submit"  class="recuperar_senha">Esqueceu a senha?</a>
+        
+                </div>
+               
+            </form>
+        </div>
+    </body>
+</html>
